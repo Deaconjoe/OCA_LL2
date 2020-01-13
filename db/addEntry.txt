@@ -1,0 +1,4 @@
+INSERT INTO LoanedLaptops
+  (CCassetTag, assetTag,DateBorrowed, BorrowedBy, LentBy, ReturnedBy,ReceivedBy, DateReturned, TimeReturned, TimeBorrowed)
+VALUES
+  ('1', '000000', '2019-10-02', '14:56:05', 'awogboroj', 'awogboroj','awogboroj', 'awogboroj', '2019-10-02', '14:56:06')

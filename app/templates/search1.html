@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		
+
+		<title>Loan Laptops: Search</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+            <form method="POST" action="">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="/alllist" class="logo">TSS CFC 4</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="/alllist">All Records</a></li>
+							<li><a href="/">Outstanding Loans</a></li>
+							<li class="active"><a href="/search">Search</a></li>
+							<li><a href="/assetoutgoing">Loan</a></li>
+							<li><a href="/assetincoming">Receive</a></li>
+						</ul>
+					
+						</ul>
+					</nav>
+
+                <!-- Main -->
+                
+					<div id="main">
+                        
+							
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>id</th>
+											<th>CCAssetTag</th>
+											<th>AssetTag</th>
+											<th>DateBorrowed</th>
+											<th>TimeBorrowed</th>
+											<th>BorrowedBy</th>
+											<th>LentBy</th>
+											<th>ReturnedBy</th>
+											<th>ReceivedBy</th>
+											<th>DateReturned</th>
+											<th>TimeReturned</th>	
+										</tr>
+									</thead>
+									
+									<tbody>
+										{% for row in rows %}
+										<tr>
+											<td>{{row["id"]}}</td>
+											<td>{{row["CCassetTag"]}}</td>
+											<td> {{row["assetTag"]}}</td>
+											<td>{{row['DateBorrowed']}}</td>	
+											<td>{{row['TimeBorrowed']}}</td>	
+											<td>{{row['BorrowedBy']}}</td>	
+											<td>{{row['LentBy']}}</td>	
+											<td>{{row['ReturnedBy']}}</td>	
+											<td>{{row['ReceivedBy']}}</td>	
+											<td>{{row['DateReturned']}}</td>	
+											<td>{{row['TimeReturned']}}</td>	
+										 </tr>
+										 {% endfor %}
+									</tbody>
+									<tfoot>
+										<tr>
+										
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							
+
+							
+
+                    </div>
+                    
+                    
+
+
+				<!-- Copyright -->
+				
+					<div id="copyright">
+							<input type="text" name="assetTag" id="srchinput" value="" placeholder="NO SEARCH RECORDS " />
+							<button class="button fit" onclick="sumbit">OK</button>
+                            </div>
+						</div>
+					
+                    
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/browser.min.js"></script>
+			<script src="/static/assets/js/breakpoints.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

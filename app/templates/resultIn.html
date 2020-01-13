@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="3;URL=/assetincoming">
+</head>
+
+<body>
+    <table border=1>
+        {% for customerNameOut,staffNameOut in result.items() %}
+        <tr>
+            <td> {{ customerNameIn }} </td>
+            <td> {{ staffNameIn }} </td>
+            <td> {{ laptopAssetTagIn }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
